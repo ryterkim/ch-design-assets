@@ -1,0 +1,105 @@
+/* COUNTRY HIGH — Button
+   Ported from the design-system Button.jsx: bold, pill CTA, uppercase label. */
+
+.ch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: transform var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.ch-btn:active {
+  transform: scale(0.97);
+}
+
+.ch-btn--full {
+  display: flex;
+  width: 100%;
+}
+
+.ch-btn--sm {
+  gap: 7px;
+  padding: 9px 16px;
+  font-size: 13px;
+}
+
+.ch-btn--md {
+  gap: 9px;
+  padding: 13px 24px;
+  font-size: 15px;
+}
+
+.ch-btn--lg {
+  gap: 11px;
+  padding: 17px 34px;
+  font-size: 17px;
+}
+
+.ch-btn--not-uppercase {
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.ch-btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+/* Variants */
+.ch-btn--primary {
+  background: var(--action-primary);
+  color: var(--text-on-dark);
+  border: 1.5px solid var(--action-primary);
+}
+.ch-btn--primary:hover:not([disabled]) {
+  background: var(--action-primary-hover);
+}
+
+.ch-btn--accent {
+  background: var(--action-accent);
+  color: var(--text-on-accent);
+  border: 1.5px solid var(--action-accent);
+}
+.ch-btn--accent:hover:not([disabled]) {
+  background: var(--action-accent-hover);
+  border-color: var(--action-accent-hover);
+}
+
+.ch-btn--secondary {
+  background: transparent;
+  color: var(--text-strong);
+  border: 1.5px solid var(--border-strong);
+}
+.ch-btn--secondary:hover:not([disabled]) {
+  background: var(--surface-subtle);
+}
+
+.ch-btn--ghost {
+  background: transparent;
+  color: var(--text-strong);
+  border: 1.5px solid transparent;
+}
+.ch-btn--ghost:hover:not([disabled]) {
+  background: var(--surface-subtle);
+}
+
+.ch-btn--premium {
+  background: var(--surface-premium);
+  color: #fff;
+  border: 1.5px solid var(--surface-premium);
+}
+.ch-btn--premium:hover:not([disabled]) {
+  background: var(--ch-beige-hover);
+  border-color: var(--ch-beige-hover);
+}

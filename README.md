@@ -37,3 +37,15 @@ https://raw.githubusercontent.com/ryterkim/ch-design-assets/main/assets/<dateina
 ## Font
 
 `bobby-jones-soft.ttf`
+
+## Theme-Code (Design-System)
+
+Die echten Styles der Summer-Break-Landingpage — als Referenz fürs Design-System:
+
+| Datei | Inhalt |
+|---|---|
+| `theme-code/country-high-tokens.css.liquid` | Design-Tokens: Farben, Typografie |
+| `theme-code/country-high-buttons.css` | Button-Styles |
+| `theme-code/landing-page.css` | Layout- & Sektions-Styles |
+| `theme-code/landing-header.js` | Header-Verhalten |
+| `theme-code/landing-testimonials.js` | Testimonial-Slider |

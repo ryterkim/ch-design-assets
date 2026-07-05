@@ -1,0 +1,207 @@
+/* COUNTRY HIGH — design tokens (fonts, colors, typography, spacing)
+   Ported from the Claude Design system bundle. Bobby Jones uses the
+   "soft" cut per the 2026-06-30 design-system update. */
+
+@font-face {
+  font-family: "Bobby Jones";
+  src: url("{{ 'bobby-jones-soft.ttf' | asset_url }}") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wolesbro Two";
+  src: url("{{ 'wolesbro-two.ttf' | asset_url }}") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Core Sans";
+  src: url("{{ 'core-sans-g45-regular.ttf' | asset_url }}") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Core Sans";
+  src: url("{{ 'core-sans-g55-medium.ttf' | asset_url }}") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree Light";
+  src: url("{{ 'figtree-light.ttf' | asset_url }}") format("truetype");
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Brand palette (raw) */
+  --ch-white: #ffffff;
+  --ch-black: #000000;
+  --ch-red: #da705b;
+  --ch-beige: #c0a888;
+  --ch-light-grey: #f7f7f7;
+  --ch-dark-grey: #545454;
+
+  --ch-paper: #faf8f5;
+  --ch-sand: #efe9e1;
+  --ch-stone: #8c8378;
+  --ch-ink: #1a1a1a;
+  --ch-night: #141210;
+  --ch-night-2: #211d1a;
+
+  --ch-red-hover: #c8604c;
+  --ch-red-press: #b5503d;
+  --ch-red-soft: #f4e0db;
+
+  --ch-beige-hover: #b09877;
+  --ch-beige-soft: #ece2d3;
+
+  /* Semantic aliases */
+  --surface-page: var(--ch-paper);
+  --surface-card: var(--ch-white);
+  --surface-subtle: var(--ch-light-grey);
+  --surface-sand: var(--ch-sand);
+  --surface-inverse: var(--ch-night);
+  --surface-inverse-2: var(--ch-night-2);
+  --surface-accent: var(--ch-red);
+  --surface-accent-soft: var(--ch-red-soft);
+  --surface-premium: var(--ch-beige);
+
+  --text-strong: var(--ch-black);
+  --text-body: #2a2622;
+  --text-muted: var(--ch-stone);
+  --text-secondary: var(--ch-dark-grey);
+  --text-accent: var(--ch-red);
+  --text-on-dark: var(--ch-white);
+  --text-on-dark-muted: #b8afa4;
+  --text-on-accent: var(--ch-white);
+  --text-premium: var(--ch-beige);
+
+  --border-strong: var(--ch-black);
+  --border-default: var(--ch-sand);
+  --border-muted: #e4ddd3;
+  --border-on-dark: rgba(255, 255, 255, 0.16);
+  --border-accent: var(--ch-red);
+
+  --action-primary: var(--ch-black);
+  --action-primary-hover: #2a2622;
+  --action-accent: var(--ch-red);
+  --action-accent-hover: var(--ch-red-hover);
+  --action-accent-press: var(--ch-red-press);
+
+  --focus-ring: var(--ch-red);
+
+  /* Type families */
+  --font-display: "Bobby Jones", "Arial Black", sans-serif;
+  --font-script: "Wolesbro Two", "Brush Script MT", cursive;
+  --font-ui: "Core Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-read: "Figtree Light", "Helvetica Neue", Arial, sans-serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --text-display-xl: 88px;
+  --lh-display-xl: 0.92;
+  --text-display-l: 64px;
+  --lh-display-l: 0.94;
+  --text-display-m: 44px;
+  --lh-display-m: 0.98;
+  --text-display-s: 32px;
+  --lh-display-s: 1.02;
+
+  --text-h: 22px;
+  --lh-h: 1.2;
+  --text-lead: 19px;
+  --lh-lead: 1.5;
+  --lh-body: 1.6;
+  --text-sm: 14px;
+  --lh-sm: 1.5;
+  --text-xs: 12px;
+  --lh-xs: 1.4;
+
+  --text-script-l: 56px;
+  --text-script-m: 34px;
+
+  --track-display: 0.005em;
+  --track-eyebrow: 0.22em;
+  --track-label: 0.06em;
+  --track-body: 0;
+
+  /* Spacing / radius / shadow / motion */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --border-hair: 1px;
+  --border-reg: 1.5px;
+  --border-bold: 2px;
+
+  --shadow-xs: 0 1px 2px rgba(40, 32, 24, 0.06);
+  --shadow-sm: 0 2px 8px rgba(40, 32, 24, 0.08);
+  --shadow-md: 0 8px 24px rgba(40, 32, 24, 0.1);
+  --shadow-lg: 0 18px 48px rgba(40, 32, 24, 0.14);
+  --shadow-accent: 0 8px 24px rgba(218, 112, 91, 0.28);
+
+  --container-max: 1200px;
+  --container-text: 680px;
+  --gutter: 24px;
+
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-inout: cubic-bezier(0.45, 0, 0.2, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 420ms;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--ch-night);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.ch-landing a {
+  text-decoration: none;
+}
+
+.ch-landing ::placeholder {
+  color: #9a9389;
+}
